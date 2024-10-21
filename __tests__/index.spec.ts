@@ -134,8 +134,7 @@ jest.mock(process.cwd() + '/src/SDK/Utils', () => ({
         }
     }),
     openWebBrowser: jest.fn(async (url: string, redirectUri: string) => {
-        const isExpo =
-            false;
+        const isExpo = false;
 
         if (isExpo) {
             return openAuthSessionAsync(url, redirectUri);
