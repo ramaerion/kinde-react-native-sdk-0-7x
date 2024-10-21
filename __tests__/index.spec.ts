@@ -1,7 +1,6 @@
 // @ts-nocheck
 
 const { KindeSDK } = require(process.cwd() + '/src/index');
-import Constants, { ExecutionEnvironment } from 'expo-constants';
 import { openAuthSessionAsync } from 'expo-web-browser';
 import jwtDecode from 'jwt-decode';
 import InAppBrowser from 'react-native-inappbrowser-reborn';
@@ -136,7 +135,7 @@ jest.mock(process.cwd() + '/src/SDK/Utils', () => ({
     }),
     openWebBrowser: jest.fn(async (url: string, redirectUri: string) => {
         const isExpo =
-            Constants.executionEnvironment === ExecutionEnvironment.StoreClient;
+            false;
 
         if (isExpo) {
             return openAuthSessionAsync(url, redirectUri);

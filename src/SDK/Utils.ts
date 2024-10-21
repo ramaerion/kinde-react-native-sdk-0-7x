@@ -12,7 +12,6 @@
  */
 
 import crypto, { LibWordArray } from 'crypto-js';
-import Constants, { ExecutionEnvironment } from 'expo-constants';
 import * as WebBrowser from 'expo-web-browser';
 import InAppBrowser from 'react-native-inappbrowser-reborn';
 import { Platform } from 'react-native'; // Added import for Platform
@@ -157,7 +156,7 @@ export const addAdditionalParameters = (
     return target;
 };
 
-export const isExpo = Constants.executionEnvironment !== undefined;
+export const isExpo = false;
 
 /**
  * Opens a web browser or in-app browser for authentication.
